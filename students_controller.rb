@@ -23,6 +23,10 @@ get '/students/:id' do
 end
 
 # create
+post '/students' do
+  Student.new(params).save
+  redirect to '/students'
+end
 
 # edit
 
